@@ -112,44 +112,142 @@ body {
 
 /* STYLING FORSIDE MENU */
 .forsidemenu {
-    /*align-items: center;*/
-    justify-items: center;
+    max-width: 100%;
+    height: auto;
+    margin-top: 2.5em;
 }
 
 #forsideimg {
     max-width: 100%;
     height: auto;
-}
-
-#uxuimenu {
-    max-width: 100%;
+    margin-top: -10%;
+    margin-left: 0.5em;
+    padding-right: 1em;
 }
 
 #uxoguiboks {
     background-color: crimson;
-    width: 116px;
+    max-width: 100%;
+    height: auto;
     text-align: center;
     color: white;
+    animation: mymove 1s;
 }
 
 #uxboks {
     background-color: crimson;
-    width: 116px;
+    max-width: 100%;
     text-align: center;
     color: white;
+    animation: mymove 1s;
 }
 
 #uiboks {
    background-color: crimson;
-    width: 116px;
+    max-width: 100%;
     text-align: center;
     color: white; 
+    animation: mymove 1s;
 }
+
+#uxoguiboks h3 {
+    font-weight: 800;
+}
+
+#uxboks h3 {
+    font-weight: 800;
+}
+
+#uiboks h3 {
+    font-weight: 800;
+}
+
+
+
+#uxuimenu {
+    text-align: center;
+
+}
+
+#uxmenu {
+    text-align: center;
+    
+}
+
+#uimenu {
+    text-align: center;
+}
+
+#designthinkingforside {
+    color: white;
+    font-weight: 600;
+}
+
+#kodningforside {
+    color: white;
+    font-weight: 600;
+}
+
+#kommunikationforside {
+    color: white;
+    font-weight: 600;
+}
+
+#usabilityforside {
+    color: white;
+    font-weight: 600;
+}
+
+#designforside {
+    color: white;
+    font-weight: 600;
+}
+
+#videoforside {
+    color: white;
+    font-weight: 600;
+}
+
+#fotoforside {
+    color: white;
+    font-weight: 600;
+}
+
+/* animation af ux/ui, ux og ui boksene */
+@keyframes mymove {
+  0%   { width: 0%;}
+  100% {  width: 100%;}
+}
+
+/* Hover effects til links på forside menu */
+#designthinkingforside:focus {
+    color: orange;
+}
+
+#uxmenu a:focus {
+    color: dodgerblue;
+}
+
+#designforside:focus {
+    color: purple;
+}
+
+#videoforside:focus {
+    color: green;
+}
+
+#fotoforside:focus {
+    color: crimson;
+}
+
 
 /* STYLING VALUEPROPERSITION */
 .valuepropersition {
+    max-width: 100%;
+    height: auto;
     text-align: center;
     color: white;
+    margin-top: 2em;
 }
 
 #overskrift {
@@ -204,21 +302,17 @@ body {
     grid-area: uimenu;
 }
 
+
 .forsidemenu {
     max-width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas: 
-        "uxuimenu uxuimenu uxuimenu"
-        "uxmenu brain uimenu"
+        "brain uxuimenu"
+        "brain uxmenu"
+        "brain uimenu";
 }
-
-#uxuimenu {
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
-
 
 
 
@@ -230,7 +324,34 @@ body {
 @media only screen and (min-width: 600px) {...}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
+@media only screen and (min-width: 768px) {
+    /* FORSIDE MENU GRID */
+    .forsidemenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "uxuimenu uxuimenu uxuimenu"
+        "uxmenu brain uimenu"
+    }
+
+    #uxuimenu {
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+    
+    #forsideimg {
+        margin-top: 1em;
+    }
+    
+    #uxmenu {
+        margin-top: 4em;
+    }
+    
+    #uimenu {
+        margin-top: 4em;
+    }
+    
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
@@ -273,6 +394,12 @@ body {
     .desktop-nav-options {
         list-style: none;
         display: inline-flex;
+        width: 110%;
+        float: right;
+    }
+    
+    .desktop-nav-options button {
+        font-size: 14px;
     }
     
     .globalmenu-desktop .btn {
@@ -288,7 +415,7 @@ body {
     .mega-liste:nth-child(4),
     .mega-liste:nth-child(5),
     .mega-liste:nth-child(6){
-        padding-left: 8em;
+        padding-left: 0em;
     }
     
     
@@ -298,9 +425,10 @@ body {
     .dropdown { 
         position: static; 
     } 
+
     
     .dropdown-menu { 
-        width: 100%;
+        max-width: 100%;
         height: auto;
     } 
     /* så menu listerne fylder hele skærmen */
@@ -322,8 +450,77 @@ body {
         color: white;
     }
     
+    /* FORSIDE MENUEN STYLING */
+    #forsideimg {
+        max-width: 100%;
+        height: auto;
+        margin-top: 0;
+        margin-left: 0;
+        padding-right: 0;
+    }
     
     
+    
+    
+    /* HELE SIDENS GRID */
+    .globalmenu-desktop {
+        grid-area: globalmenu-desktop;
+    }
+    
+    #mitgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "globalmenu-desktop globalmenu-desktop"
+        "valuepropersition forsidemenu";
+    }
+    
+    /* FORSIDE MENU STYLING */
+    .forsidemenu {
+        /*align-items: center;*/
+        justify-items: center;
+    }
+    
+    
+    /* Global menu grid */
+    .navbar-brand {
+        grid-area: logo;
+    }
+    
+    .desktop-nav-options {
+        grid-area: options;
+        
+    }
+    
+    header {
+        max-width: 100%;
+        height: auto;
+        margin-right: -500px;
+    }
+    
+    .globalmenu-desktop {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: 
+            "logo options";
+    }
+    
+    
+    /* FORSIDE MENU GRID */
+    .forsidemenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "uxuimenu uxuimenu uxuimenu"
+        "uxmenu brain uimenu"
+    }
+
+    #uxuimenu {
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+    
+
     
     
     
@@ -331,6 +528,19 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    header {
+        margin-right: -250px;
+    }
+    
+    .desktop-nav-options button {
+        font-size: 15px;
+        
+    }
+    
+    .desktop-nav-options {
+        transform: translateX(15%);
+    }
+    
 
     
     
