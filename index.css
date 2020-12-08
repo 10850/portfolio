@@ -28,3 +28,321 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 
 /*  END RESET */
+
+/* Styling body og pagewrap */
+body {
+    background: linear-gradient(360deg,#030303 10%,#1f1f1f 360%);
+    background-repeat: no-repeat;
+}
+
+#test {
+    height: 1000px;
+}
+
+/* STYLING GENERELT (MOBILE FIRST) */
+/* GLOBAL MENU */
+/* Burgermenu ikonet START*/
+.navbar-toggler .burgermenu-line {
+    width: 30px;
+    height: 3px;
+    display: block;
+    background-color: #fff;
+    border-radius: 3px;
+} /* Dette er for at lave nye linjer som kan laves helt hvide */
+
+.navbar-toggler .burgermenu-line:nth-child(2),
+.navbar-toggler .burgermenu-line:nth-child(3){
+    margin-top: 8px;
+} /* Dette er for at lave afstand mellem de tre linjer uden at den øverste linje laver afstand til toppen af siden */
+
+.navbar-toggler .burgermenu-line:nth-child(3) {
+    height: 3.2px;
+} /* den sidste linje for lidt mere højde fordi den så ud til at blive cuttede af på toppen */
+
+.navbar button {
+    border: none;
+} /* Dette er for at den grå border omkring burgermenuen ikke er der */
+
+.navbar button {
+      border: none;
+      outline: none;
+    } /* Dette er for at fjerne den border/outline som kommer frem når man trykker på burger menuen */
+/* Burgermenu ikonet END*/
+
+/* Links focus effect START */
+#nav-link-uxui:focus {
+    background-color: orange;
+} /* til design thinking linket */
+
+#nav-link-ux1:focus,
+#nav-link-ux2:focus,
+#nav-link-ux3:focus {
+    background-color: dodgerblue;
+} /* til kodning, kommunikation og usability link */
+
+#nav-link-ui1:focus {
+    background-color: purple;
+} /* til design link */
+
+#nav-link-ui2:focus {
+    background-color: green;
+} /* til videoproduktion link */
+
+#nav-link-ui3:focus {
+    background-color: crimson;
+} /* til fotografering link */
+
+#nav-link-projekter:focus,
+#nav-link-omsiden:focus {
+    background-color: white;
+    color: black;
+} /* til projekter og om siden link */
+
+/* Links focus effect END */
+
+/* menu liste */
+.navbar-collapse {
+    margin-top: 5px;
+}
+
+/* display på mobil og tablet */
+.globalmenu-desktop {
+    display: none;
+}
+
+/* STYLING FORSIDE MENU */
+.forsidemenu {
+    /*align-items: center;*/
+    justify-items: center;
+}
+
+#forsideimg {
+    max-width: 100%;
+    height: auto;
+}
+
+#uxuimenu {
+    max-width: 100%;
+}
+
+#uxoguiboks {
+    background-color: crimson;
+    width: 116px;
+    text-align: center;
+    color: white;
+}
+
+#uxboks {
+    background-color: crimson;
+    width: 116px;
+    text-align: center;
+    color: white;
+}
+
+#uiboks {
+   background-color: crimson;
+    width: 116px;
+    text-align: center;
+    color: white; 
+}
+
+/* STYLING VALUEPROPERSITION */
+.valuepropersition {
+    text-align: center;
+    color: white;
+}
+
+#overskrift {
+    font-size: 30px;
+}
+
+#underoverskrift {
+    font-size: 18px;
+}
+
+
+
+/* GRIDS */
+/* HELE SIDEN MOBIL */
+.globalmenu {
+    grid-area: mobilmenu;
+}
+
+.forsidemenu {
+    grid-area: forsidemenu;
+}
+
+.valuepropersition {
+    grid-area: valuepropersition;
+}
+
+#mitgrid {
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "mobilmenu"
+        "valuepropersition"
+        "forsidemenu";
+}
+
+/* FORSIDE MENU */
+#forsideimg {
+    grid-area: brain;
+}
+
+#uxuimenu {
+    grid-area: uxuimenu;
+}
+
+#uxmenu {
+    grid-area: uxmenu;
+}
+
+#uimenu {
+    grid-area: uimenu;
+}
+
+.forsidemenu {
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "uxuimenu uxuimenu uxuimenu"
+        "uxmenu brain uimenu"
+}
+
+#uxuimenu {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* GLOBAL MENU DESKTOP */
+    /* display */
+    .navbar {
+        display: none;
+    }
+    
+    .globalmenu-desktop {
+        display: block;
+    }
+    
+    /* logo og options positioning */
+    .globalmenu-desktop .desktop-nav-options {
+        float: right;
+    }
+    
+    .globalmenu-desktop {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        margin-top: 0.5em;
+    }
+    /* logo og options positioning */
+    
+    /* mega liste farve/styling */
+    .dropdown-menu {
+        background: linear-gradient(360deg,#030303 10%,#1f1f1f 360%);
+        background-repeat: no-repeat;
+    }
+    
+    .dropdown-menu {
+        color: white;
+    }
+    
+    .dropdown-menu a{
+        color: white;
+    }
+    
+    .desktop-nav-options {
+        list-style: none;
+        display: inline-flex;
+    }
+    
+    .globalmenu-desktop .btn {
+        color: white;
+    } /* for at gør dropdrown knapper hvide */
+    
+    .mega-liste h3 {
+        color: white;
+    }
+    
+    .mega-liste:nth-child(2),
+    .mega-liste:nth-child(3),
+    .mega-liste:nth-child(4),
+    .mega-liste:nth-child(5),
+    .mega-liste:nth-child(6){
+        padding-left: 8em;
+    }
+    
+    
+    /* mega liste farve/styling */
+    
+    /* så menu listerne fylder hele skærmen */
+    .dropdown { 
+        position: static; 
+    } 
+    
+    .dropdown-menu { 
+        width: 100%;
+        height: auto;
+    } 
+    /* så menu listerne fylder hele skærmen */
+    
+    /* mega dropdown lister styling */
+    .mega-dropdown-lister-container .mega-liste {
+        list-style: none;
+        display: inline-block;
+    }
+    /* mega dropdown lister styling */
+    
+    /* hover/focus effects */
+    .mega-liste .dropdown-item:focus {
+        background: dodgerblue;
+    }
+    
+    .mega-liste .dropdown-item:hover {
+        background: dodgerblue;
+        color: white;
+    }
+    
+    
+    
+    
+    
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
