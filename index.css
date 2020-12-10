@@ -29,18 +29,22 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 /*  END RESET */
 
+
+
+
+
+/* INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTMLINDEX.HTML INDEX.HTML START*/ 
+
 /* Styling body og pagewrap */
 body {
     background: linear-gradient(360deg,#030303 10%,#1f1f1f 360%);
     background-repeat: no-repeat;
 }
 
-#test {
-    height: 1000px;
-}
 
-/* STYLING GENERELT (MOBILE FIRST) */
+/* STYLING MOBILE FIRST */
 /* GLOBAL MENU */
+
 /* Burgermenu ikonet START*/
 .navbar-toggler .burgermenu-line {
     width: 30px;
@@ -68,6 +72,7 @@ body {
       outline: none;
     } /* Dette er for at fjerne den border/outline som kommer frem når man trykker på burger menuen */
 /* Burgermenu ikonet END*/
+
 
 /* Links focus effect START */
 #nav-link-uxui:focus {
@@ -99,6 +104,7 @@ body {
 } /* til projekter og om siden link */
 
 /* Links focus effect END */
+
 
 /* menu liste */
 .navbar-collapse {
@@ -239,7 +245,7 @@ body {
 #fotoforside:focus {
     color: crimson;
 }
-
+/* STYLING FORSIDEMENU END */
 
 /* STYLING VALUEPROPERSITION */
 .valuepropersition {
@@ -257,7 +263,7 @@ body {
 #underoverskrift {
     font-size: 18px;
 }
-
+/* STYLING VALUEPROPERSITION END */
 
 
 /* GRIDS */
@@ -285,7 +291,7 @@ body {
         "forsidemenu";
 }
 
-/* FORSIDE MENU */
+/* FORSIDE MENU MOBIL*/
 #forsideimg {
     grid-area: brain;
 }
@@ -315,13 +321,11 @@ body {
 }
 
 
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {...}
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
+@media only screen and (min-width: 600px) {
+    
+    
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -338,6 +342,8 @@ body {
         grid-column-start: 2;
         grid-column-end: 2;
     }
+    
+    /* STYLING FORSIDE MENU */
     
     #forsideimg {
         margin-top: 1em;
@@ -357,153 +363,14 @@ body {
 @media only screen and (min-width: 992px) {
     /* GLOBAL MENU DESKTOP */
     /* display */
-    .navbar {
-        display: none;
-    }
-    
-    .globalmenu-desktop {
-        display: block;
-    }
-    
-    /* logo og options positioning */
-    .globalmenu-desktop .desktop-nav-options {
-        float: right;
-    }
-    
-    .globalmenu-desktop {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        margin-top: 0.5em;
-    }
-    /* logo og options positioning */
-    
-    /* mega liste farve/styling */
-    .dropdown-menu {
-        background: linear-gradient(360deg,#030303 10%,#1f1f1f 360%);
-        background-repeat: no-repeat;
-    }
-    
-    .dropdown-menu {
-        color: white;
-    }
-    
-    .dropdown-menu a{
-        color: white;
-    }
-    
-    .desktop-nav-options {
-        list-style: none;
-        display: inline-flex;
-        width: 110%;
-        float: right;
-    }
-    
-    .desktop-nav-options button {
-        font-size: 14px;
-    }
-    
-    .globalmenu-desktop .btn {
-        color: white;
-    } /* for at gør dropdrown knapper hvide */
-    
-    .mega-liste h3 {
-        color: white;
-    }
-    
-    .mega-liste:nth-child(2),
-    .mega-liste:nth-child(3),
-    .mega-liste:nth-child(4),
-    .mega-liste:nth-child(5),
-    .mega-liste:nth-child(6){
-        padding-left: 0em;
-    }
     
     
-    /* mega liste farve/styling */
-    
-    /* så menu listerne fylder hele skærmen */
-    .dropdown { 
-        position: static; 
-    } 
-
-    
-    .dropdown-menu { 
-        max-width: 100%;
-        height: auto;
-    } 
-    /* så menu listerne fylder hele skærmen */
-    
-    /* mega dropdown lister styling */
-    .mega-dropdown-lister-container .mega-liste {
-        list-style: none;
-        display: inline-block;
-    }
-    /* mega dropdown lister styling */
-    
-    /* hover/focus effects */
-    .mega-liste .dropdown-item:focus {
-        background: dodgerblue;
-    }
-    
-    .mega-liste .dropdown-item:hover {
-        background: dodgerblue;
-        color: white;
-    }
-    
-    /* FORSIDE MENUEN STYLING */
-    #forsideimg {
-        max-width: 100%;
-        height: auto;
-        margin-top: 0;
-        margin-left: 0;
-        padding-right: 0;
-    }
+    /* HOVER OG FOCUS*/
     
     
+    /* DEKSTOP MENU GRID */
     
     
-    /* HELE SIDENS GRID */
-    .globalmenu-desktop {
-        grid-area: globalmenu-desktop;
-    }
-    
-    #mitgrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-        "globalmenu-desktop globalmenu-desktop"
-        "valuepropersition forsidemenu";
-    }
-    
-    /* FORSIDE MENU STYLING */
-    .forsidemenu {
-        /*align-items: center;*/
-        justify-items: center;
-    }
-    
-    
-    /* Global menu grid */
-    .navbar-brand {
-        grid-area: logo;
-    }
-    
-    .desktop-nav-options {
-        grid-area: options;
-        
-    }
-    
-    header {
-        max-width: 100%;
-        height: auto;
-        margin-right: -500px;
-    }
-    
-    .globalmenu-desktop {
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        grid-template-areas: 
-            "logo options";
-    }
     
     
     /* FORSIDE MENU GRID */
@@ -528,23 +395,14 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    header {
-        margin-right: -250px;
-    }
-    
-    .desktop-nav-options button {
-        font-size: 15px;
-        
-    }
-    
-    .desktop-nav-options {
-        transform: translateX(15%);
-    }
+
     
 
     
     
 }
+
+/* INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTML INDEX.HTMLINDEX.HTML INDEX.HTML END*/
 
 
 
