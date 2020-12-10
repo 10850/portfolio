@@ -398,17 +398,19 @@ body {
         height: auto;
         margin: 0 auto;
         position: relative;
+        padding-right: 2em;
     }
     
     .nav-links-desktop {
         display: inline-block;
+        width: 100%;
         text-align: center;
         padding: 15px 0;
-        margin-right: 20px;
         cursor: pointer;
         color: white;
         transition: all 0.4s ease;
     }
+    
     
     .nav-links-desktop:last-child {
         margin-right: 0;
@@ -418,11 +420,12 @@ body {
     .mega-menu {
         position: absolute;
         width: 100%;
-        margin-top: 5px;
+        display: inline-block;
+        margin-top: 30px;
         transition: all 0.4s ease;
         background-color: black;
         padding: 20px 0;
-        right: 15%;
+        left: 0;
     }
     
     .inner-mega-titel {
@@ -430,8 +433,8 @@ body {
     }
     
     .inner-mega-menu {
-        margin-right: 3em;
         display: inline-block;
+        margin-right: 10%;
     }
     
     .inner-mega-links {
@@ -459,7 +462,7 @@ body {
         opacity: 1;
     }
     
-    /* DEKSTOP MENU GRID */
+    /* DEKSTOP MENU GRIDS */
     .menu-links-desktop {
         grid-area: globalmenu-desktop;
     }
@@ -475,6 +478,53 @@ body {
         grid-template-areas: 
             "logo globalmenu-desktop";
     }
+    
+    /* GRID FOR MENU LISTE PLACERING */
+    .menuliste1 {
+        grid-area: menuliste1;
+    }
+    
+    .menuliste2 {
+        grid-area: menuliste2;
+    }
+    
+    .menuliste3 {
+        grid-area: menuliste3;
+    }
+    
+    .menuliste4 {
+        grid-area: menuliste4;
+    }
+    
+    .menuliste5 {
+        grid-area: menuliste5;
+    }
+    
+    .menuliste6 {
+        grid-area: menuliste6;
+    }
+    
+    .menuliste7 {
+        grid-area: menuliste7;
+    }
+    
+    .menuliste8 {
+        grid-area: menuliste8;
+    }
+    
+    .menuliste9 {
+        grid-area: menuliste9;
+    }
+    
+    
+    .menu-links-desktop {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas: 
+            "menuliste1 menuliste2 menuliste3 menuliste4 menuliste5 menuliste6 menuliste7 menuliste8 menuliste9";
+    }
+    
     
     
     
